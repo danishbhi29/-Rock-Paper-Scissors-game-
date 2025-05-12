@@ -1,17 +1,18 @@
 import random
 
+choices = ['r', 'p', 's']
 while True:
     userInput = input("Rock, Paper, Scissors? (r/p/s or q to quit): ").lower()
 
     if userInput == 'q':
         print("Thanks for playing!")
         break
-
-    if userInput not in ['r', 'p', 's']:
+    
+    if userInput not in choices:
         print("Invalid input! Please choose r, p, or s.")
         continue
 
-    systemInput = random.choice(['r', 'p', 's'])
+    systemInput = random.choice(choices)
 
     print("Your choice:", userInput)
     print("System choice:", systemInput)
